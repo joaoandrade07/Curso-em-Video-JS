@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    <label for="txtp">Digite o país de nascimento: </label>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        var texto = document.querySelector('#txtp')
+        var res = document.querySelector('#res')
+        
+
+        function verificar(){
+            //texto2 = texto.value
+            if (texto.value.toLowerCase() == "brasil"){
+                res.innerHTML = '<p>Você é <strong>Brasileiro</strong>.'
+            } else {
+                res.innerHTML = '<p>Você é <strong>Estrangeiro</strong>.'
+            }
+        }
+    </script>
+</body>
+</html>
